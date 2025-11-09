@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: soft-street-container
-        image: soft-street:1
+        image: varma8k8k/soft-street:{{tag}}
         ports:
         - containerPort: 80
