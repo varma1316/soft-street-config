@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: soft-street-service
+spec:
+  selector:
+    app: soft-street
+  ports:
+    - port: 80
+      targetPort: 80
+  type: LoadBalancer

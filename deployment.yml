@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: soft-street-deployment
+  labels:
+    app: soft-street
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: soft-street
+  template:
+    metadata:
+      labels:
+        app: soft-street
+    spec:
+      containers:
+      - name: soft-street-container
+        image: soft-street:1
+        ports:
+        - containerPort: 80
